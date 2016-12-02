@@ -1,7 +1,5 @@
 | Behavior| Input Example: | Output Example: |
 |---|---|---|
-|User inputs a word| house   | house   |
-|User inputs a sentence  | the house is blue   | the house is blue  |
-|Check if sentence contains word | the house is blue   | true  |
-|Check how many times the word is in the sentence | this house is blue and that house is green| | 2 |
-|Display result to a second page  | the house is blue   | 1  |
+|Recognize if input word and another inputted word match| input word : house, other word input : house   | house = house   |
+|Recognize if input word isn't the same as other inputted word| input word: house, other word input : car | house != car |
+|Figure out how many instances of the inputted word there are| input word : house, other word input: househouse | 2  |
