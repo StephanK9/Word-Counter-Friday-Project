@@ -31,12 +31,12 @@ namespace WordCounter.Objects
 
     public int CountRepeats()
     {
-      string[] searchForWords = _userInputString.Split(' ');
-      foreach(string word in searchForWords)
+      string[] searchForWords = _userInputString.ToLower().Split(' ');
+      for (int i = 0; i < searchForWords.Length; i++)
       {
-        if(_userInputWord.ToLower() == word.ToLower())
+        if(searchForWords[i] == _userInputWord.ToLower())
         {
-        _wordsCounted += 1;
+          _wordsCounted += 1;
         }
       }
     return _wordsCounted;

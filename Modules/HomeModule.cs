@@ -16,7 +16,9 @@ namespace WordCounter
       Post["/wordcount"] = _ =>
       {
         RepeatCounter newRepeatCounter = new RepeatCounter(Request.Form["user-word"], Request.Form["user-string"]);
+
         newRepeatCounter.CountRepeats();
+
         return View["word_count.cshtml", newRepeatCounter];
       };
     }
