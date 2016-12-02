@@ -7,10 +7,10 @@ namespace WordCounter
   public class RepeatCounterTest
   {
     [Fact]
-    public void RepeatCounterTest1_SentenceContainsWord_True()
+    public void RepeatCounterTest1_RecognizeSame_True()
     {
-      RepeatCounter testRepeatCounter = new RepeatCounter("house");
-      Assert.Equal("there is", testRepeatCounter.GetCount());
+      RepeatCounter testRepeatCounter = new RepeatCounter("house", "house");
+      Assert.Equal(1, testRepeatCounter.CountRepeats());
     }
   }
 }

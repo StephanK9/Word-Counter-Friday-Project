@@ -6,9 +6,9 @@ namespace WordCounter.Objects
   {
     private string _userInputWord;
     private string _userInputString;
-    private int _wordTotal = 0;
+    private int _wordCount = 0;
 
-    public CountRepeats(string userInputWord, string userInputString)
+    public RepeatCounter(string userInputWord, string userInputString)
     {
       _userInputWord = userInputWord;
       _userInputString = userInputString;
