@@ -35,10 +35,10 @@ namespace WordCounter.Objects
       foreach(string word in searchForWords)
       {
         if(_userInputWord.ToLower() == word.ToLower())
-      {
+        {
         _wordsCounted += 1;
+        }
       }
-    }
     return _wordsCounted;
   }
  }
