@@ -17,12 +17,16 @@ namespace WordCounter.Objects
     public int CountRepeats()
     {
       //return 0; used for testing fail
-      if(_userInputWord == _userInputString)
+      //used for second test if(_userInputWord == _userInputString)
+      string[] searchForWords = _userInputString.Split(' ');
+      foreach(string word in searchForWords)
+      {
+        if(_userInputWord == word)
       {
         _wordsCounted += 1;
-        return _wordsCounted;
-      }
-      return _wordsCounted;
       }
     }
+    return _wordsCounted;
   }
+ }
+}
