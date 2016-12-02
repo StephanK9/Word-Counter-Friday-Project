@@ -6,7 +6,7 @@ namespace WordCounter.Objects
   {
     private string _userInputWord;
     private string _userInputString;
-    private int _wordCount = 0;
+    private int _wordsCounted = 0;
 
     public RepeatCounter(string userInputWord, string userInputString)
     {
@@ -16,7 +16,13 @@ namespace WordCounter.Objects
 
     public int CountRepeats()
     {
-      return 0;
+      //return 0; used for testing fail
+      if(_userInputWord == _userInputString)
+      {
+        _wordsCounted += 1;
+        return _wordsCounted;
+      }
+      return _wordsCounted;
+      }
     }
   }
-}
