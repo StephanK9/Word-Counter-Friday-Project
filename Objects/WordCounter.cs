@@ -14,14 +14,27 @@ namespace WordCounter.Objects
       _userInputString = userInputString;
     }
 
+    public string GetUserWord()
+    {
+      return _userInputWord;
+    }
+
+    public string GetUserString()
+    {
+      return _userInputString;
+    }
+
+    public int GetWordsCounted()
+    {
+      return _wordsCounted;
+    }
+
     public int CountRepeats()
     {
-      //return 0; used for testing fail
-      //used for second test if(_userInputWord == _userInputString)
       string[] searchForWords = _userInputString.Split(' ');
       foreach(string word in searchForWords)
       {
-        if(_userInputWord == word)
+        if(_userInputWord.ToLower() == word.ToLower())
       {
         _wordsCounted += 1;
       }
